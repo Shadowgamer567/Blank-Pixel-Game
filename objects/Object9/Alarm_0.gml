@@ -21,6 +21,5 @@ if(variable <= 0){	/// @DnDAction : YoYo Games.Instances.Set_Alarm
 	/// @DnDVersion : 1
 	/// @DnDHash : 4258B9AA
 	/// @DnDParent : 0C03A0E7
-	/// @DnDArgument : "steps" "120"
 	/// @DnDArgument : "steps_relative" "1"
-	alarm_set(0, 120 + alarm_get(0));}
+	alarm_set(0, 30 + alarm_get(0));}

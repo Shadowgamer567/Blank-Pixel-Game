@@ -58,8 +58,8 @@ if(spawn_timer >= spawn_interval){	/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDVersion : 1
 			/// @DnDHash : 7DF6DA65
 			/// @DnDParent : 23097EC9
-			/// @DnDArgument : "expr" "point_distance(px ,py, cx, cy) > safe_distance"
-			if(point_distance(px ,py, cx, cy) > safe_distance){	/// @DnDAction : YoYo Games.Loops.Repeat
+			/// @DnDArgument : "expr" "point_distance(px ,py, cx, cy) <= safe_distance"
+			if(point_distance(px ,py, cx, cy) <= safe_distance){	/// @DnDAction : YoYo Games.Loops.Repeat
 				/// @DnDVersion : 1
 				/// @DnDHash : 22B3EF9F
 				/// @DnDParent : 7DF6DA65
