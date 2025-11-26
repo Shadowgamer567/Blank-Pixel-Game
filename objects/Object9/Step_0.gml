@@ -1,3 +1,14 @@
+/// @DnDAction : YoYo Games.Common.If_Variable
+/// @DnDVersion : 1
+/// @DnDHash : 34450BE0
+/// @DnDArgument : "var" "obj_quiz_controller.game_paused"
+/// @DnDArgument : "value" "true"
+if(obj_quiz_controller.game_paused == true){	/// @DnDAction : YoYo Games.Common.Exit_Event
+	/// @DnDVersion : 1
+	/// @DnDHash : 0F2FE20F
+	/// @DnDParent : 34450BE0
+	exit;}
+
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 24604CBD

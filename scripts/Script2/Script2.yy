@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Script2",
+  "isCompatibility":false,
+  "isDnD":true,
+  "name":"Script2",
+  "parent":{
+    "name":"com.gamemaker",
+    "path":"com.gamemaker.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

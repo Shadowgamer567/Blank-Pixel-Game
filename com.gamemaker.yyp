@@ -29,7 +29,9 @@
     {"$GMFolder":"","%Name":"Top","folderPath":"folders/Tile Sets/Pixel/Top.yy","name":"Top","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
   "ForcedPrefabProjectReferences":[],
-  "IncludedFiles":[],
+  "IncludedFiles":[
+    {"$GMIncludedFile":"","%Name":"Questions.txt","CopyToMask":-1,"filePath":"datafiles","name":"Questions.txt","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+  ],
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
@@ -37,6 +39,7 @@
   },
   "name":"com.gamemaker",
   "resources":[
+    {"id":{"name":"obj_quiz_controller","path":"objects/obj_quiz_controller/obj_quiz_controller.yy",},},
     {"id":{"name":"obj_spawner","path":"objects/obj_spawner/obj_spawner.yy",},},
     {"id":{"name":"Object1","path":"objects/Object1/Object1.yy",},},
     {"id":{"name":"Object10","path":"objects/Object10/Object10.yy",},},
@@ -50,6 +53,9 @@
     {"id":{"name":"Object8","path":"objects/Object8/Object8.yy",},},
     {"id":{"name":"Object9","path":"objects/Object9/Object9.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"RoomUI","path":"roomui/RoomUI/RoomUI.yy",},},
+    {"id":{"name":"Script1","path":"scripts/Script1/Script1.yy",},},
+    {"id":{"name":"Script2","path":"scripts/Script2/Script2.yy",},},
     {"id":{"name":"spr_illustrated_side_Flameville","path":"sprites/spr_illustrated_side_Flameville/spr_illustrated_side_Flameville.yy",},},
     {"id":{"name":"spr_illustrated_side_Haunted_Graveyard","path":"sprites/spr_illustrated_side_Haunted_Graveyard/spr_illustrated_side_Haunted_Graveyard.yy",},},
     {"id":{"name":"spr_illustrated_side_Ice_Land","path":"sprites/spr_illustrated_side_Ice_Land/spr_illustrated_side_Ice_Land.yy",},},
