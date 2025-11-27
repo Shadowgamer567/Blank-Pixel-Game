@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"Script1",
+  "%Name":"scr_load_questions",
   "isCompatibility":false,
   "isDnD":true,
-  "name":"Script1",
+  "name":"scr_load_questions",
   "parent":{
     "name":"com.gamemaker",
     "path":"com.gamemaker.yyp",

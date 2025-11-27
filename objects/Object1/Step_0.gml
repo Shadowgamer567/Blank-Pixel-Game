@@ -1,3 +1,16 @@
+/// @DnDAction : YoYo Games.Mouse & Keyboard.If_Key_Pressed
+/// @DnDVersion : 1
+/// @DnDHash : 7F26706D
+/// @DnDArgument : "key" "ord("M")"
+var l7F26706D_0;l7F26706D_0 = keyboard_check_pressed(ord("M"));if (l7F26706D_0){	/// @DnDAction : YoYo Games.Common.Variable
+	/// @DnDVersion : 1
+	/// @DnDHash : 569FE2E4
+	/// @DnDParent : 7F26706D
+	/// @DnDArgument : "expr" "100"
+	/// @DnDArgument : "expr_relative" "1"
+	/// @DnDArgument : "var" "xp"
+	xp += 100;}
+
 /// @DnDAction : YoYo Games.Common.If_Variable
 /// @DnDVersion : 1
 /// @DnDHash : 15964BBD
@@ -88,18 +101,33 @@ if(xp >= lvl_up){	/// @DnDAction : YoYo Games.Common.Variable
 		/// @DnDHash : 123ADA23
 		/// @DnDInput : 2
 		/// @DnDParent : 3861F6EB
-		/// @DnDArgument : "expr_1" "global.start_quiz = true"
+		/// @DnDArgument : "expr_1" "true"
 		/// @DnDArgument : "var" "xp"
-		/// @DnDArgument : "var_1" "quiz_start"
+		/// @DnDArgument : "var_1" "global.start_quiz"
 		xp = 0;
-		quiz_start = global.start_quiz = true;
+		global.start_quiz = true;
 	
-		/// @DnDAction : YoYo Games.Common.Execute_Script
-		/// @DnDVersion : 1.1
-		/// @DnDHash : 5E3027C8
+		/// @DnDAction : YoYo Games.Common.Apply_To
+		/// @DnDVersion : 1
+		/// @DnDHash : 6FE08055
+		/// @DnDApplyTo : {obj_quiz_controller}
 		/// @DnDParent : 3861F6EB
-		/// @DnDArgument : "script" "start_quiz"
-		script_execute(start_quiz);}}
+		with(obj_quiz_controller) {
+			/// @DnDAction : YoYo Games.Common.Execute_Script
+			/// @DnDVersion : 1.1
+			/// @DnDHash : 5E3027C8
+			/// @DnDParent : 6FE08055
+			/// @DnDArgument : "script" "scr_start_quiz"
+			/// @DnDSaveInfo : "script" "scr_start_quiz"
+			script_execute(scr_start_quiz);
+		
+			/// @DnDAction : YoYo Games.Common.Variable
+			/// @DnDVersion : 1
+			/// @DnDHash : 146DF53C
+			/// @DnDParent : 6FE08055
+			/// @DnDArgument : "expr" "show_debug_message("Level-up! Triggered quiz on controller");"
+			variable = show_debug_message("Level-up! Triggered quiz on controller");;
+		}}}
 
 /// @DnDAction : YoYo Games.Movement.Wrap_Room
 /// @DnDVersion : 1

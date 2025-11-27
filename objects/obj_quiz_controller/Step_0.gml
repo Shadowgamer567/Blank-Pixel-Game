@@ -1,8 +1,9 @@
 /// @DnDAction : YoYo Games.Common.If_Variable
 /// @DnDVersion : 1
 /// @DnDHash : 51923B86
-/// @DnDArgument : "var" "quiz_active == true"
-if(quiz_active == true == 0){	/// @DnDAction : YoYo Games.Loops.Repeat
+/// @DnDArgument : "var" "quiz_active"
+/// @DnDArgument : "value" "true"
+if(quiz_active == true){	/// @DnDAction : YoYo Games.Loops.Repeat
 	/// @DnDVersion : 1
 	/// @DnDHash : 385413A2
 	/// @DnDParent : 51923B86
@@ -93,4 +94,11 @@ if(quiz_active == true == 0){	/// @DnDAction : YoYo Games.Loops.Repeat
 				/// @DnDArgument : "var" "quiz_active"
 				/// @DnDArgument : "var_1" "game_paused"
 				quiz_active = false;
-				game_paused = false;}}}}
+				game_paused = false;}}}
+
+	/// @DnDAction : YoYo Games.Common.Variable
+	/// @DnDVersion : 1
+	/// @DnDHash : 5E582667
+	/// @DnDParent : 51923B86
+	/// @DnDArgument : "expr" "show_debug_message("Quiz Status: " + quiz_active)"
+	variable = show_debug_message("Quiz Status: " + quiz_active);}

@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"Script2",
+  "%Name":"scr_start_quiz",
   "isCompatibility":false,
   "isDnD":true,
-  "name":"Script2",
+  "name":"scr_start_quiz",
   "parent":{
     "name":"com.gamemaker",
     "path":"com.gamemaker.yyp",

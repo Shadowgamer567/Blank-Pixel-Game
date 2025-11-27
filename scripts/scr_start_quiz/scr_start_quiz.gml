@@ -6,14 +6,16 @@
 function start_quiz() {	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
 	/// @DnDHash : 6827B548
-	/// @DnDInput : 3
+	/// @DnDInput : 4
 	/// @DnDParent : 0222A39D
 	/// @DnDArgument : "expr" "true"
 	/// @DnDArgument : "expr_1" "true"
 	/// @DnDArgument : "expr_2" "irandom(array_length(global.questions) - 1)"
+	/// @DnDArgument : "expr_3" "show_debug_message("Script was ran")"
 	/// @DnDArgument : "var" "quiz_active"
 	/// @DnDArgument : "var_1" "game_paused"
 	/// @DnDArgument : "var_2" "current_question"
 	quiz_active = true;
 	game_paused = true;
-	current_question = irandom(array_length(global.questions) - 1);}
+	current_question = irandom(array_length(global.questions) - 1);
+	variable = show_debug_message("Script was ran");}
