@@ -1,11 +1,10 @@
 /// @DnDAction : YoYo Games.Common.If_Variable
 /// @DnDVersion : 1
-/// @DnDHash : 194ABC6A
-/// @DnDDisabled : 1
-/// @DnDArgument : "var" "obj_quiz_controller.game_paused"
+/// @DnDHash : 5D9BCC97
+/// @DnDArgument : "var" "global.quiz_active"
 /// @DnDArgument : "value" "true"
-/// @DnDAction : YoYo Games.Common.Exit_Event
-/// @DnDVersion : 1
-/// @DnDHash : 48A53A70
-/// @DnDParent : 194ABC6A
-exit;
+if(global.quiz_active == true){	/// @DnDAction : YoYo Games.Common.Exit_Event
+	/// @DnDVersion : 1
+	/// @DnDHash : 335B8FE4
+	/// @DnDParent : 5D9BCC97
+	exit;}

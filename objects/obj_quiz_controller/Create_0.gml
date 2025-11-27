@@ -1,15 +1,13 @@
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 19A2B399
-/// @DnDInput : 3
+/// @DnDInput : 2
 /// @DnDArgument : "expr" "false"
-/// @DnDArgument : "expr_1" "false"
-/// @DnDArgument : "var" "quiz_active"
-/// @DnDArgument : "var_1" "game_paused"
-/// @DnDArgument : "var_2" "current_question"
-quiz_active = false;
-game_paused = false;
-current_question = 0;
+/// @DnDArgument : "expr_1" "-1"
+/// @DnDArgument : "var" "global.quiz_active"
+/// @DnDArgument : "var_1" "global.quiz_question"
+global.quiz_active = false;
+global.quiz_question = -1;
 
 /// @DnDAction : YoYo Games.Common.Execute_Script
 /// @DnDVersion : 1.1

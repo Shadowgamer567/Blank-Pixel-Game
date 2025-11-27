@@ -54,6 +54,7 @@
     {"id":{"name":"Object9","path":"objects/Object9/Object9.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"RoomUI","path":"roomui/RoomUI/RoomUI.yy",},},
+    {"id":{"name":"scr_check_answer","path":"scripts/scr_check_answer/scr_check_answer.yy",},},
     {"id":{"name":"scr_load_questions","path":"scripts/scr_load_questions/scr_load_questions.yy",},},
     {"id":{"name":"scr_start_quiz","path":"scripts/scr_start_quiz/scr_start_quiz.yy",},},
     {"id":{"name":"spr_illustrated_side_Flameville","path":"sprites/spr_illustrated_side_Flameville/spr_illustrated_side_Flameville.yy",},},

@@ -6,16 +6,14 @@
 function load_questions() {	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
 	/// @DnDHash : 16691A18
-	/// @DnDInput : 3
+	/// @DnDInput : 2
 	/// @DnDParent : 2FE2FF8C
 	/// @DnDArgument : "expr" "[]"
 	/// @DnDArgument : "expr_1" "file_text_open_read("Questions.txt")"
 	/// @DnDArgument : "var" "global.questions"
 	/// @DnDArgument : "var_1" "file"
-	/// @DnDArgument : "var_2" "current_q"
 	global.questions = [];
 	file = file_text_open_read("Questions.txt");
-	current_q = 0;
 
 	/// @DnDAction : YoYo Games.Loops.Repeat
 	/// @DnDVersion : 1
@@ -43,15 +41,15 @@ function load_questions() {	/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDVersion : 1
 			/// @DnDHash : 3C8690D3
 			/// @DnDParent : 5C5E4D7D
-			/// @DnDArgument : "expr" "current_q + 1"
-			/// @DnDArgument : "var" "current_q"
-			current_q = current_q + 1;
+			/// @DnDArgument : "expr" "global.quiz_question + 1"
+			/// @DnDArgument : "var" "global.quiz_question"
+			global.quiz_question = global.quiz_question + 1;
 		
 			/// @DnDAction : YoYo Games.Common.Execute_Code
 			/// @DnDVersion : 1
 			/// @DnDHash : 387490DA
 			/// @DnDParent : 5C5E4D7D
-			/// @DnDArgument : "code" "/// @description Execute Code$(13_10)global.questions = [];$(13_10)$(13_10)var f = file_text_open_read("Questions.txt");$(13_10)var current = -1;$(13_10)$(13_10)while (!file_text_eof(f)) {$(13_10)    var line = string_trim(file_text_readln(f));$(13_10)	$(13_10)	show_debug_message("LINE: [" + line + "]");$(13_10)    // Question$(13_10)    if (string_pos("Q.", line) == 1) {$(13_10)        current++;$(13_10)        global.questions[current] = {$(13_10)            text: string_copy($(13_10)                line,$(13_10)                string_pos("\"", line) + 1,$(13_10)                string_last_pos("\"", line) - string_pos("\"", line) - 1$(13_10)            ),$(13_10)            answers: ["", "", "", ""],$(13_10)            correct: 0$(13_10)        };$(13_10)    }$(13_10)$(13_10)    // Answer$(13_10)    else if (string_pos("a.", line) == 1) {$(13_10)        var idx = real(string_copy($(13_10)            line,$(13_10)            string_last_pos(".", line) + 1,$(13_10)            1$(13_10)        )) - 1;$(13_10)$(13_10)        var txt = string_copy($(13_10)            line,$(13_10)            string_pos("\"", line) + 1,$(13_10)            string_last_pos("\"", line) - string_pos("\"", line) - 1$(13_10)        );$(13_10)$(13_10)        global.questions[current].answers[idx] = txt;$(13_10)$(13_10)        if (string_pos("*C*", line) > 0) {$(13_10)            global.questions[current].correct = idx;$(13_10)        }$(13_10)    }$(13_10)}$(13_10)$(13_10)file_text_close(f);$(13_10)"
+			/// @DnDArgument : "code" "/// @description Execute Code$(13_10)global.questions = [];$(13_10)$(13_10)var f = file_text_open_read("Questions.txt");$(13_10)var current = -1;$(13_10)$(13_10)while (!file_text_eof(f)) {$(13_10)    var line = string_trim(file_text_readln(f));$(13_10)	if (line == "") continue;$(13_10)	$(13_10)	show_debug_message("LINE: [" + line + "]");$(13_10)    // Question$(13_10)    if (string_copy(line,1,2) == "Q.") {$(13_10)        current++;$(13_10)        global.questions[current] = {$(13_10)            text: string_copy($(13_10)                line,$(13_10)                string_pos("\"", line) + 1,$(13_10)                string_last_pos("\"", line) - string_pos("\"", line) - 1$(13_10)            ),$(13_10)            answers: ["", "", "", ""],$(13_10)            correct: 0$(13_10)        };$(13_10)    }$(13_10)$(13_10)    // Answer$(13_10)    else if (string_copy(line,1,2) == "a.") {$(13_10)        var idx = real(string_copy($(13_10)            line,$(13_10)            string_last_pos(".", line) + 1,$(13_10)            1$(13_10)        )) - 1;$(13_10)$(13_10)        var txt = string_copy($(13_10)            line,$(13_10)            string_pos("\"", line) + 1,$(13_10)            string_last_pos("\"", line) - string_pos("\"", line) - 1$(13_10)        );$(13_10)$(13_10)        global.questions[current].answers[idx] = txt;$(13_10)$(13_10)        if (string_pos("*C*", line) > 0) {$(13_10)            global.questions[current].correct = idx;$(13_10)        }$(13_10)    }$(13_10)}$(13_10)$(13_10)file_text_close(f);$(13_10)"
 			/// @description Execute Code
 			global.questions = [];
 			
@@ -60,10 +58,11 @@ function load_questions() {	/// @DnDAction : YoYo Games.Common.Variable
 			
 			while (!file_text_eof(f)) {
 			    var line = string_trim(file_text_readln(f));
+				if (line == "") continue;
 				
 				show_debug_message("LINE: [" + line + "]");
 			    // Question
-			    if (string_pos("Q.", line) == 1) {
+			    if (string_copy(line,1,2) == "Q.") {
 			        current++;
 			        global.questions[current] = {
 			            text: string_copy(
@@ -77,7 +76,7 @@ function load_questions() {	/// @DnDAction : YoYo Games.Common.Variable
 			    }
 			
 			    // Answer
-			    else if (string_pos("a.", line) == 1) {
+			    else if (string_copy(line,1,2) == "a.") {
 			        var idx = real(string_copy(
 			            line,
 			            string_last_pos(".", line) + 1,

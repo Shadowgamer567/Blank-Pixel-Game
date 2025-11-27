@@ -13,13 +13,13 @@ var l7F26706D_0;l7F26706D_0 = keyboard_check_pressed(ord("M"));if (l7F26706D_0
 
 /// @DnDAction : YoYo Games.Common.If_Variable
 /// @DnDVersion : 1
-/// @DnDHash : 15964BBD
-/// @DnDArgument : "var" "obj_quiz_controller.game_paused"
+/// @DnDHash : 53BA144D
+/// @DnDArgument : "var" "global.quiz_active"
 /// @DnDArgument : "value" "true"
-if(obj_quiz_controller.game_paused == true){	/// @DnDAction : YoYo Games.Common.Exit_Event
+if(global.quiz_active == true){	/// @DnDAction : YoYo Games.Common.Exit_Event
 	/// @DnDVersion : 1
-	/// @DnDHash : 2A7AD7DA
-	/// @DnDParent : 15964BBD
+	/// @DnDHash : 7C69D4AD
+	/// @DnDParent : 53BA144D
 	exit;}
 
 /// @DnDAction : YoYo Games.Mouse & Keyboard.If_Key_Down
@@ -99,13 +99,9 @@ if(xp >= lvl_up){	/// @DnDAction : YoYo Games.Common.Variable
 	if(lvl + 1){	/// @DnDAction : YoYo Games.Common.Variable
 		/// @DnDVersion : 1
 		/// @DnDHash : 123ADA23
-		/// @DnDInput : 2
 		/// @DnDParent : 3861F6EB
-		/// @DnDArgument : "expr_1" "true"
 		/// @DnDArgument : "var" "xp"
-		/// @DnDArgument : "var_1" "global.start_quiz"
 		xp = 0;
-		global.start_quiz = true;
 	
 		/// @DnDAction : YoYo Games.Common.Apply_To
 		/// @DnDVersion : 1
@@ -117,16 +113,15 @@ if(xp >= lvl_up){	/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDVersion : 1.1
 			/// @DnDHash : 5E3027C8
 			/// @DnDParent : 6FE08055
-			/// @DnDArgument : "script" "scr_start_quiz"
-			/// @DnDSaveInfo : "script" "scr_start_quiz"
-			script_execute(scr_start_quiz);
+			/// @DnDArgument : "script" "start_quiz"
+			script_execute(start_quiz);
 		
 			/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDVersion : 1
 			/// @DnDHash : 146DF53C
 			/// @DnDParent : 6FE08055
-			/// @DnDArgument : "expr" "show_debug_message("Level-up! Triggered quiz on controller");"
-			variable = show_debug_message("Level-up! Triggered quiz on controller");;
+			/// @DnDArgument : "expr" "show_debug_message("QUIZ ACTIVATED");"
+			variable = show_debug_message("QUIZ ACTIVATED");;
 		}}}
 
 /// @DnDAction : YoYo Games.Movement.Wrap_Room
