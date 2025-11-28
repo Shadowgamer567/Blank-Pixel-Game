@@ -34,7 +34,14 @@
     {"name":"inst_60CAB441","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_17C86754","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_12D2ED2A","path":"rooms/Room1/Room1.yy",},
+    {"name":"inst_32938280","path":"roomui/RoomUI/RoomUI.yy",},
+    {"name":"inst_31745D13","path":"roomui/RoomUI/RoomUI.yy",},
+    {"name":"inst_319C1DFF","path":"roomui/RoomUI/RoomUI.yy",},
+    {"name":"inst_7401122","path":"roomui/RoomUI/RoomUI.yy",},
+    {"name":"inst_2069E151","path":"roomui/RoomUI/RoomUI.yy",},
     {"name":"inst_76AE9E6F","path":"roomui/RoomUI/RoomUI.yy",},
+    {"name":"inst_6246A014","path":"roomui/RoomUI/RoomUI.yy",},
+    {"name":"inst_4F59D7C","path":"roomui/RoomUI/RoomUI.yy",},
   ],
   "isDnd":true,
   "layers":[
@@ -560,7 +567,7 @@
   },
   "sequenceId":null,
   "views":[
-    {"hborder":1366,"hport":768,"hspeed":-1,"hview":768,"inherit":false,"objectId":{"name":"Object1","path":"objects/Object1/Object1.yy",},"vborder":768,"visible":true,"vspeed":-1,"wport":1366,"wview":1366,"xport":0,"xview":300,"yport":0,"yview":120,},
+    {"hborder":1366,"hport":768,"hspeed":-1,"hview":768,"inherit":false,"objectId":{"name":"Object1","path":"objects/Object1/Object1.yy",},"vborder":768,"visible":true,"vspeed":-1,"wport":1366,"wview":1366,"xport":0,"xview":325,"yport":0,"yview":180,},
     {"hborder":32,"hport":768,"hspeed":-1,"hview":768,"inherit":false,"objectId":null,"vborder":32,"visible":false,"vspeed":-1,"wport":1366,"wview":1366,"xport":0,"xview":0,"yport":0,"yview":0,},
     {"hborder":32,"hport":768,"hspeed":-1,"hview":768,"inherit":false,"objectId":null,"vborder":32,"visible":false,"vspeed":-1,"wport":1366,"wview":1366,"xport":0,"xview":0,"yport":0,"yview":0,},
     {"hborder":32,"hport":768,"hspeed":-1,"hview":768,"inherit":false,"objectId":null,"vborder":32,"visible":false,"vspeed":-1,"wport":1366,"wview":1366,"xport":0,"xview":0,"yport":0,"yview":0,},

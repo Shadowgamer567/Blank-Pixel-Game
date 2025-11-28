@@ -8,8 +8,8 @@ var l7F26706D_0;l7F26706D_0 = keyboard_check_pressed(ord("M"));if (l7F26706D_0
 	/// @DnDParent : 7F26706D
 	/// @DnDArgument : "expr" "100"
 	/// @DnDArgument : "expr_relative" "1"
-	/// @DnDArgument : "var" "xp"
-	xp += 100;}
+	/// @DnDArgument : "var" "global.xp"
+	global.xp += 100;}
 
 /// @DnDAction : YoYo Games.Common.If_Variable
 /// @DnDVersion : 1
@@ -75,8 +75,8 @@ var l2417285F_0;l2417285F_0 = keyboard_check(vk_down);if (l2417285F_0){	/// 
 /// @DnDAction : YoYo Games.Common.If_Expression
 /// @DnDVersion : 1
 /// @DnDHash : 2FC2119E
-/// @DnDArgument : "expr" "xp >= lvl_up && lvl_up_pending == false && global.quiz_active == false"
-if(xp >= lvl_up && lvl_up_pending == false && global.quiz_active == false){	/// @DnDAction : YoYo Games.Common.Variable
+/// @DnDArgument : "expr" "global.xp >= lvl_up && lvl_up_pending == false && global.quiz_active == false"
+if(global.xp >= lvl_up && lvl_up_pending == false && global.quiz_active == false){	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
 	/// @DnDHash : 2B638E81
 	/// @DnDInput : 4
@@ -106,18 +106,4 @@ if(xp >= lvl_up && lvl_up_pending == false && global.quiz_active == false){	//
 		/// @DnDParent : 6FE08055
 		/// @DnDArgument : "script" "start_quiz"
 		script_execute(start_quiz);
-	
-		/// @DnDAction : YoYo Games.Common.Variable
-		/// @DnDVersion : 1
-		/// @DnDHash : 146DF53C
-		/// @DnDParent : 6FE08055
-		/// @DnDArgument : "expr" "show_debug_message("QUIZ ACTIVATED");"
-		variable = show_debug_message("QUIZ ACTIVATED");;
 	}}
-
-/// @DnDAction : YoYo Games.Movement.Wrap_Room
-/// @DnDVersion : 1
-/// @DnDHash : 609BF4E1
-/// @DnDArgument : "hor" "0"
-/// @DnDArgument : "ver" "0"
-move_wrap(0, 0, 0);
