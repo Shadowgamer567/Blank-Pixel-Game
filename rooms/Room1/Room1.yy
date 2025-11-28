@@ -34,6 +34,7 @@
     {"name":"inst_60CAB441","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_17C86754","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_12D2ED2A","path":"rooms/Room1/Room1.yy",},
+    {"name":"inst_76AE9E6F","path":"roomui/RoomUI/RoomUI.yy",},
   ],
   "isDnd":true,
   "layers":[
@@ -571,7 +572,7 @@
   "viewSettings":{
     "clearDisplayBuffer":false,
     "clearViewBackground":false,
-    "enableViews":false,
+    "enableViews":true,
     "inheritViewSettings":false,
   },
   "volume":1.0,
