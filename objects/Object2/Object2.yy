@@ -22,7 +22,7 @@
   "physicsGroup":1,
   "physicsKinematic":true,
   "physicsLinearDamping":0.1,
-  "physicsObject":true,
+  "physicsObject":false,
   "physicsRestitution":0.1,
   "physicsSensor":false,
   "physicsShape":1,
@@ -40,8 +40,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Sprite22",
-    "path":"sprites/Sprite22/Sprite22.yy",
+    "name":"Sprite43",
+    "path":"sprites/Sprite43/Sprite43.yy",
   },
   "spriteMaskId":{
     "name":"Sprite22",

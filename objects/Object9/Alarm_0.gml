@@ -17,18 +17,4 @@ if(global.quiz_active == false){	/// @DnDAction : YoYo Games.Instances.Create_
 	/// @DnDArgument : "ypos_relative" "1"
 	/// @DnDArgument : "objectid" "Object2"
 	/// @DnDSaveInfo : "objectid" "Object2"
-	instance_create_layer(x + 0, y + 0, "Instances", Object2);
-
-	/// @DnDAction : YoYo Games.Instances.Get_Alarm
-	/// @DnDVersion : 1
-	/// @DnDHash : 4DD1A122
-	/// @DnDParent : 2B29561C
-	/// @DnDArgument : "var_temp" "1"
-	var variable = alarm_get(0);
-
-	/// @DnDAction : YoYo Games.Common.If_Expression
-	/// @DnDVersion : 1
-	/// @DnDHash : 0C03A0E7
-	/// @DnDParent : 2B29561C
-	/// @DnDArgument : "expr" "variable <= 0"
-	if(variable <= 0){}}
+	instance_create_layer(x + 0, y + 0, "Instances", Object2);}

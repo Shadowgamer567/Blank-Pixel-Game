@@ -1,3 +1,13 @@
+/// @DnDAction : YoYo Games.Common.If_Expression
+/// @DnDVersion : 1
+/// @DnDHash : 4BF2510C
+/// @DnDArgument : "expr" "room != Room1"
+if(room != Room1){	/// @DnDAction : YoYo Games.Common.Exit_Event
+	/// @DnDVersion : 1
+	/// @DnDHash : 53E727A8
+	/// @DnDParent : 4BF2510C
+	exit;}
+
 /// @DnDAction : YoYo Games.Common.If_Variable
 /// @DnDVersion : 1
 /// @DnDHash : 4BAA5208
